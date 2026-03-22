@@ -5,6 +5,9 @@ import { createVisualTickets } from "@/lib/ticket-generator";
 import { allocateTicketSequences } from "@/lib/ticket-sequence";
 import { formatTicketId } from "@/lib/ticketing";
 
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();

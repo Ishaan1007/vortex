@@ -3,13 +3,16 @@ import Razorpay from "razorpay";
 import { randomUUID } from "crypto";
 import { prisma } from "@/lib/prisma";
 
-const razorpay = new Razorpay({
-  key_id: process.env.RAZORPAY_KEY_ID || "rzp_test_dummy",
-  key_secret: process.env.RAZORPAY_KEY_SECRET || "rzp_test_dummy_secret",
-});
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 
 export async function POST(request: NextRequest) {
   try {
+    const razorpay = new Razorpay({
+      key_id: process.env.RAZORPAY_KEY_ID || "rzp_test_dummy",
+      key_secret: process.env.RAZORPAY_KEY_SECRET || "rzp_test_dummy_secret",
+    });
+
     const body = await request.json();
     const { amount, userName, gamesSelected, quantity } = body;
 

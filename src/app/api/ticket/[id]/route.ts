@@ -2,6 +2,9 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { parseStoredTicketPayload } from "@/lib/ticketing";
 
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
 export async function GET(_request: Request, context: { params: Promise<{ id: string }> }) {
   try {
     const resolvedParams = await context.params;

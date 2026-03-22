@@ -37,8 +37,8 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VORTEX '26 - Event Ticketing",
-  description: "Book tickets for VORTEX '26 indoor games event",
+  title: "VORTEX '26 - Indoor Games Registration",
+  description: "College event registration and ticket booking website for VORTEX '26 indoor games.",
 };
 
 export default function RootLayout({

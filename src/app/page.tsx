@@ -95,6 +95,27 @@ export default function Home() {
           </p>
         </section>
 
+        <section className="mb-8 rounded-[28px] border border-rose-100 bg-[linear-gradient(135deg,#fff5f7_0%,#fff1f2_52%,#fef2f2_100%)] p-5 sm:p-6">
+          <p
+            className="text-xs font-semibold uppercase tracking-[0.28em] text-vortex-red"
+            style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
+          >
+            Registration Notice
+          </p>
+          <h2 className="mt-3 text-2xl font-bold text-slate-900 sm:text-3xl" style={{ fontFamily: "var(--font-montserrat)" }}>
+            This website is for event ticket booking only
+          </h2>
+          <div className="mt-4 space-y-3 text-sm leading-7 text-slate-700 sm:text-base" style={{ fontFamily: "var(--font-source-sans)" }}>
+            <p>
+              VORTEX &apos;26 is presented as a college event registration platform for indoor games. Participants can
+              select listed games, pay the displayed participation fee, and receive digital tickets after successful payment.
+            </p>
+            <p>
+              This website is not used for donations, crowdfunding, MLM activity, adult content, or any restricted business category.
+            </p>
+          </div>
+        </section>
+
         {/* Game Details */}
         <section className="mb-8 space-y-6">
           <div>
@@ -140,6 +161,33 @@ export default function Home() {
             <p className="text-sm text-gray-500 sm:text-base" style={{ fontFamily: "var(--font-source-sans)" }}>
               <strong>Location:</strong> UCOE court
             </p>
+          </div>
+        </section>
+
+        <section className="mb-20 rounded-[24px] border border-slate-200 bg-slate-50 p-5 sm:mb-8 sm:p-6">
+          <h2 className="text-2xl font-semibold text-slate-800" style={{ fontFamily: "var(--font-cormorant)" }}>
+            Policies and Support
+          </h2>
+          <p className="mt-2 text-sm leading-7 text-slate-600 sm:text-base" style={{ fontFamily: "var(--font-source-sans)" }}>
+            These pages explain the organizer, support process, terms, and refund handling for registrations made on this website.
+          </p>
+          <div className="mt-5 grid gap-3 sm:grid-cols-2">
+            {[
+              { href: "/about", label: "About the Organizer" },
+              { href: "/contact", label: "Contact Us" },
+              { href: "/privacy-policy", label: "Privacy Policy" },
+              { href: "/terms", label: "Terms and Conditions" },
+              { href: "/refund-policy", label: "Refund and Cancellation Policy" },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="rounded-[18px] border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700 transition hover:border-vortex-red hover:text-vortex-red"
+                style={{ fontFamily: "var(--font-ibm-plex-mono)" }}
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
         </section>
 

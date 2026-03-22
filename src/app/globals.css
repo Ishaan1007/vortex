@@ -3,11 +3,19 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --vortex-red: #f84464;
+  --vortex-red-hover: #f84464;
+  --vortex-red-soft: #ffd7df;
+  --vortex-red-border: #f84464;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-vortex-red: var(--vortex-red);
+  --color-vortex-red-hover: var(--vortex-red-hover);
+  --color-vortex-red-soft: var(--vortex-red-soft);
+  --color-vortex-red-border: var(--vortex-red-border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -23,4 +31,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
